@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background-color: var(--fourth-color);
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+@media only screen and (max-width:1000px){
+    header{
+        height: 3rem;
+    }
+    header .logo img{ 
+        display: none;
+    }
+    header .logo h1{
+        font-size: 1.7rem !important;
+        padding: 1rem;
+    }
+    header .list ul{
+        flex-direction: column;
+        position: absolute;
+        top: 2.5rem !important;
+        right: -200%;
+        background-color: var(--second-color);
+        padding: 10px 20px !important;
+        transition: .5s ease-in-out;
+    }
+    header .list ul li a{
+        color: var(--fourth-color) ;
+    }
+    header .menu {
+        display: block !important;
+    }
+    header .menu i{
+        font-size: 20px;
+        padding: 2rem;
+    }
+    header .list .show {
+        right: 0rem;
+    }
+    header .search input {
+        width: 8rem !important;
+        height: 1rem !important;
+    }
+    header .search{
+        padding: .2rem .4rem;
+    }
+    main .photo{
+        margin-top: 3rem !important;
+    }
+    main #categories{
+        padding: 1rem !important;
+    }
+    main #categories a {
+        font-size: .7rem;
+    }
+    main .middle .books img{
+        width: 100px !important;
+        height: 150px !important;
+    }
+    main .middle a h3{
+        width: 110px !important;
+    }
+    main .picture img{
+        width: 85vw;
+        height: 250px !important;
+    }
+    main .pic-text .image img{
+        height: 20rem !important;
+        width: 14rem !important;
+    }
+    main .pic-text .text{
+        width: 50vw;
+    }
+    main .pic-text .text h1{
+        font-size: 2rem !important;
+        text-align: center;
+        color: var(--third-color);
+    }
+    footer{
+        padding: 2rem !important;
+        border-top-left-radius: 7rem !important;
+    }
+    footer .elements ul li{
+        font-size: .8rem !important;
+        width: 100px;
+    }
+    footer h2{
+        font-size: 1.1rem !important;
+    }
+    footer .media a i{
+        font-size: 1rem !important;
+    }
+    .information{
+        margin-top: 2.5rem !important;
+        padding: .5rem !important;
+    }
+    .information .left p{
+        width: 50vw !important;
+    }
+    .information .left img{
+        width: 12rem !important;
+        height: 18rem !important;
+        margin-left: 0 !important;
+    }
+    .book-desc .book img{
+        height: 13rem !important;
+        width: 8rem !important ;
+    }
+    .book-desc .book .description{
+        margin-right: 1rem;
+    }
+    .book-desc .book .description h1{
+        font-size: 1rem;
+    }
+    .book-desc .book .description p{
+        font-size: .7rem !important;
+        width: 50vw !important;
+    }
+    .book-desc .book .paragraph .description{
+        padding: .5rem !important;
+    }
+    .book-desc .book .paragraph .price {
+        margin-left: .5rem !important;
+        margin-top: .5rem !important;
+    }
+    .book-desc .book .paragraph .price h1{
+        font-size: 1.2rem;
+    }
+    .book-desc .book .paragraph .price p{
+        font-size: .9rem ;
+    }
+    .book-desc .book .paragraph .order button {
+        margin-top: 4em !important;
+        font-size: .7rem ;
+    }
+    .book-desc .info p{
+        font-size: .8rem !important;
+    }
+}
+:root{
+    --first-color:#a1cca5;
+    --second-color:#8fb996;
+    --third-color:#709775;
+    --fourth-color:white;
+    --fifth-color:black;
+}
+.dark{
+    --first-color:#8fb996;
+    --second-color:#344e41;
+    --third-color:#1b4332;
+    --fourth-color:#709775;
+    --fifth-color:white;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--second-color);
+}
+header .logo {
+    display: flex;
+    align-items: center;
+}
+header .logo img{
+    width: 4rem;
+}
+header .logo h1{
+    font-size: 3rem;
+}
+header .search input {
+    width: 15rem;
+    height: 2rem;
+    background-color: var(--first-color);
+    border: none;
+}
+header .search i{
+    background-color: var(--first-color);
+}
+header .search{
+    background-color: var(--first-color);
+    padding: .4rem .7rem;
+    border-radius: .7rem;
+    border: 2px solid var(--third-color);
+}
+header .list ul{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 0rem .6rem;
+}
+header .list ul button{
+    background-color: var(--first-color);
+    padding: .5rem 1.2rem;
+    border-radius: .8rem;
+    box-shadow: 0.2rem 0.2rem 0.6rem gray;
+    border: none;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+}
+header .list ul li a{
+    font-size: 1.1rem;
+    color:var(--fifth-color);
+}
+header .list ul li a:hover{
+    text-decoration: underline var(--third-color);
+}
+
+header .list ul li button:hover{
+    padding: .6rem 1.3rem;
+    cursor: pointer;
+
+}
+header .menu{
+    display: none;
+}
+main{
+    margin-bottom: 6rem;
+}
+main .photo{
+    width: 100vw;
+    height: 85vh;
+    background:linear-gradient(rgba(0,0,0,0.6) ,rgba(0,0,0,0.6)), url('./pics/green.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 4.8rem;
+    display: flex;
+    align-items: center;
+}
+main .photo p{
+    color: white;
+    width: 45vw;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+main #categories{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    padding: 2rem;
+}
+main #categories a{
+    background-color: var(--second-color);
+    text-align: center;
+    padding: .7rem 0rem;
+    border-radius: .7rem;
+    color: var(--fifth-color);
+}
+main #categories a:hover{
+    padding: .9rem 0rem;
+    box-shadow: 5px 5px 20px var(--fifth-color);
+}
+main .books {
+    display: flex;
+    flex-wrap: wrap;
+}
+main .middle .books a{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+main .middle button:hover{
+    cursor: pointer;
+}
+main .middle .books img{
+    width: 200px;
+    height: 300px;
+    border-radius: 1rem;
+    border: 2px solid var(--third-color);
+}
+main .middle img:hover{
+    width: 210px;
+    height: 310px;
+    box-shadow: .4rem .4rem .4rem var(--first-color);
+    margin-bottom: 1rem;
+}
+main .middle a h3{
+    width: 190px;
+    text-align: center;
+    color: var(--third-color);
+}
+main .middle h1{
+    color: var(--third-color);
+    margin-top: 3rem;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+main .middle{
+    margin-left: 1rem;
+}
+main .picture{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+main .picture img{
+    width: 85vw;
+    height: 400px;
+    border-radius: 1rem;
+}
+main .pic-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+main .pic-text .image img{
+    height: 30rem;
+    width: 25rem;
+}
+main .pic-text .text{
+    width: 50vw;
+}
+main .pic-text .text h1{
+    font-size: 4.5rem;
+    text-align: center;
+    color: var(--third-color);
+}
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--second-color);
+    padding: 5rem;
+    border-top-left-radius: 10rem;
+    bottom: 0;
+}
+footer h2{
+    color: var(--fifth-color);
+}
+footer .elements ul li{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+footer .elements ul li a{
+    color: var(--fifth-color);
+}
+footer .elements ul li a:hover{
+    color: var(--first-color);
+}
+footer .elements ul li a:active{
+    color: white;
+}
+footer .media a i{
+    color: var(--fifth-color);
+    font-size: 1.5rem;
+    margin-right: .4rem;
+    margin-top: .4rem;
+}
+.book-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.book-desc button{
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: .7rem;
+    background-color: var(--first-color);
+}
+.book-desc button a{
+    color: var(--fifth-color);
+}
+.book-desc .book {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.book-desc .book img{
+    height: 25rem;
+    width: 18rem;
+    border-radius: .5rem;
+    border: 1px solid var(--third-color);
+}
+.book-desc .book .paragraph p{
+    font-size: 1.2rem;
+    width: 70vw;
+}
+.book-desc .book .paragraph .description{
+    background-color: var(--first-color);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.book-desc .book .paragraph .price {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.book-desc .book .paragraph .price p{
+    margin-top: 1rem;
+    background-color: var(--first-color);
+    width: fit-content;
+    padding: .6rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+.book-desc .book .paragraph .order{
+    display: flex;
+    align-items: center;
+}
+.book-desc .book .paragraph .order button {
+    border-radius: 1rem;
+    margin-top: 6em;
+    margin-left: 2rem;
+    border: 1px solid black;
+}
+.book-desc .book .paragraph .order button:hover{
+    cursor: pointer;
+}
+.book-desc .info p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.information{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+.information .left p{
+    width: 70%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+} 
+.information .left img{
+    height: 25rem;
+    width: 20rem;
+    margin-left: 6rem;
+    border-radius: 1rem;
+}
+.information .left hr{
+    width: 80%;
+}
+.information .right p{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.information .right .choose{
+    border: 2px solid var(--third-color);
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--first-color);
+
+}
+.contact{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+.contact .left {
+    width: 50%;
+}
+.contact .left hr {
+    margin-bottom: 2rem;
+}
+.contact .left h1 {
+    margin-bottom: 1.3rem;
+}
+.contact .left p{
+    margin-bottom: 1.3rem;
+    background-color: var(--first-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--third-color);
+}
+.contact .left h2 {
+    margin-bottom: 1.3rem;
+}
+.contact .left h3 {
+    margin-bottom: 1.3rem;
+}
+.contact .right {
+    width: 40%;
+}
+.contact .right h3{
+    margin-bottom: 1.3rem;
+}
+.contact .right p{
+    margin-bottom: 1.3rem;
+    background-color:var(--third-color);
+    padding: 1rem;
+    border: 1px solid var(--first-color);
+    border-radius: 1rem ;
+}
+.categorie {
+    margin-top: 6rem;
+    margin-left: 1rem;
+}
+.categorie h1{
+    margin-bottom: 2rem;
+}
+.categorie .books{
+    display: flex;
+    flex-wrap: wrap;
+}
+.categorie .books a{
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+.categorie .books img{
+    height: 300px;
+    width: 200px;
+    border-radius: 1rem;
+    border: 1px solid var(--third-color);
+}
+main .categorie img:hover{
+    width: 210px;
+    height: 310px;
+    box-shadow: .4rem .4rem .4rem var(--first-color);
+    margin-bottom: 1rem;
+}
+.categorie .books h3{
+    width: 11rem;
+    text-align: center;
+    color: var(--third-color);
+    margin-left: 1.5rem;
+}
